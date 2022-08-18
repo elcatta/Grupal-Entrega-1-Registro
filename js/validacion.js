@@ -57,7 +57,7 @@ function validarFormulario(){
     blanquearColor("email");
   }
 
-  if(password1.value == null || password1.value == "" || password1.value < 6 || password1.value != password2.value) {
+  if(password1.value == null || password1.value == "" || password1.value.length < 6 || password1.value != password2.value) {
     showAlertError();
     cambiarColor("password1");
     todocorrecto = false;
@@ -65,7 +65,7 @@ function validarFormulario(){
     blanquearColor("password1");
   }
 
-  if(password2.value == null || password2.value == "" || password2.value < 6 || password1.value != password2.value) {
+  if(password2.value == null || password2.value == "" || password2.value.length < 6 || password1.value != password2.value) {
     showAlertError();
     cambiarColor("password2");
     todocorrecto = false;
